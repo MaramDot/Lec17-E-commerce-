@@ -1,0 +1,168 @@
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#F5F2F0;
+    color:#42211A;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#6B3F2B;
+    color:white;
+}
+
+.navbar h2{
+    margin:0;
+}
+
+.navbar button{
+    margin-left:10px;
+    padding:8px 14px;
+    border:none;
+    border-radius:6px;
+    background:#A67C52;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.navbar button:hover{
+    background:#B8928D;
+}
+
+
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:40px;
+    max-width:1100px;
+    margin:auto;
+}
+
+
+.card{
+    background:#E0DFDC;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    height:140px;
+    object-fit:contain;
+}
+
+.card h3{
+    font-size:18px;
+}
+
+.card p{
+    font-weight:bold;
+}
+
+.card button{
+    margin:5px;
+    padding:6px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#A67C52;
+    color:white;
+    transition:0.3s;
+}
+
+.card button:hover{
+    background:#B8928D;
+}
+
+
+.cart,
+.favorites{
+    padding:40px;
+}
+
+.cart-item,
+.fav-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#E0DFDC;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:8px;
+}
+
+.cart-item button,
+.fav-item button{
+    margin-left:5px;
+    padding:6px 10px;
+    border:none;
+    border-radius:6px;
+    background:#A67C52;
+    color:white;
+    cursor:pointer;
+}
+
+.cart-item button:hover,
+.fav-item button:hover{
+    background:#B8928D;
+}
+
+
+.total{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+.empty{
+    text-align:center;
+    margin-top:60px;
+    font-size:20px;
+    color:#6B3F2B;
+}
+
+.card-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+@media (max-width:768px){
+
+.products{
+grid-template-columns:repeat(2,1fr);
+padding:20px;
+}
+
+}
+
+@media (max-width:500px){
+
+.products{
+grid-template-columns:1fr;
+}
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+}
